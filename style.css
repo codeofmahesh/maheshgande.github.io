@@ -4,15 +4,18 @@
     border: border-box;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+html {
+    scroll-behavior: smooth;
+}
 /* scrollbar  */
 ::-webkit-scrollbar {
     width: 1vw;
 }
 ::-webkit-scrollbar-track {
-    background: #555454;
+    background: #313030;
 }
 ::-webkit-scrollbar-thumb {
-    background: #191919;
+    background: #565555;
 } 
 ::-webkit-scrollbar-thumb:hover {
     background: #888;
@@ -25,7 +28,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
-/* cursor  */
+
 /* background */
 .background {
     position: fixed;
@@ -49,6 +52,7 @@ a {
         transform: scale(1.5);
     }
 }
+
 /* nav bar  */
 .nav-bar {
     overflow: hidden;
@@ -71,13 +75,8 @@ a {
     background-color: #ddd;
     color: black;
 }
-
 .nav-list {
     float: right;
-    /* width: 50%;
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 1.5rem; */
 }
 @media screen and (max-width: 500px) {
     .nav-bar {
@@ -97,7 +96,6 @@ a {
 }
 
 /* Introduction page  */
-
 .info {
     margin: 0 170px;
     margin-top: 100px;
@@ -112,7 +110,6 @@ a {
     border-radius: 50%;
     height: 13em;
     width: 13em;
-    transition: 1s;
 }
 
 .name {
@@ -133,6 +130,9 @@ a {
     margin-top: 2rem;
     cursor: pointer;
 }
+.email-link {
+    color: red;
+}
 @media screen and (max-width: 500px) {
     .info {
         margin: 0;
@@ -140,15 +140,20 @@ a {
         justify-content: center;
         align-items: center;
     }
+    .info-text {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 2rem;
+    }
     .btn-p {
-        /* align-self: center; */
-        width: 90%;
+        width: 100%;
+        padding: 0 2px;
     }
 
 }
 
 /* project gallery  */
-
 .project {
     margin: 100px 170px 0 170px;
     text-align: center;
@@ -166,31 +171,36 @@ a {
     justify-content: space-evenly;
 }
 .box {
-    height: 300px;
     width: 40%;
     background-color: white;
-    /* padding: 20px 0px 15px; */
-    margin-bottom: 10px;
 }
 .box-img {
-    height: 260px;
+    height: 16rem;
     background-size: contain;
     background-repeat: no-repeat;
-    /* margin-bottom: 1rem; */
 }
 .project-name {
     font-size: 22px;
     color: black;
+    padding: 0.2rem 0;
 }
 @media screen and (max-width: 500px) {
     .project {
-        margin: 20px 5px 0 5px;
+        margin: 80px 5px 0 5px;
+    }
+    .aboutme {
+        margin-bottom: 2rem;
     }
     .project-gallery {
         flex-direction: column;
+        padding: 0 2px;
     }
     .box {
         width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    .box-img {
+        height: 13rem;
     }
 }
 
@@ -200,7 +210,6 @@ a {
     width: 100%;
     background: #3586ff;
     min-height: 100px;
-    /* padding: 20px 50px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -273,21 +282,19 @@ a {
     opacity: 0.5;
     bottom: 10px;
     animation: animate 4s linear infinite !important;
-}
-  
-  .wave#wave3 {
+} 
+.wave#wave3 {
     z-index: 1000;
     opacity: 0.2;
     bottom: 15px;
     animation: animateWaves 3s linear infinite;
-  }
-  
-  .wave#wave4 {
+}
+.wave#wave4 {
     z-index: 999;
     opacity: 0.7;
     bottom: 20px;
     animation: animate 3s linear infinite;
-  }
+}
   
 @keyframes animateWaves {
     0% {
@@ -296,8 +303,7 @@ a {
     100% {
       background-positon-x: 0px;
     }
-}
-  
+} 
 @keyframes animate {
     0% {
       background-position-x: -1000px;
@@ -306,4 +312,3 @@ a {
       background-positon-x: 0px;
     }
 }
-
